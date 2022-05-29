@@ -1,0 +1,135 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f6f2;
+  overflow-x: hidden;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #776e65;
+}
+
+.container {
+  width: 500px;
+  margin: 20px auto 40px;
+}
+
+h1.title {
+  font-weight: 100;
+  font-size: 50px;
+  margin: 0;
+}
+
+.level-container {
+  float: right;
+  background-color: lightblue;
+  padding: 8px 10px;
+  border-radius: 3px;
+  text-align: center;
+  position: relative;
+  top: -20px;
+}
+
+.level-container .level-title {
+  font-size: 10px;
+}
+
+.level-container .level-value {
+  font-size: 25px;
+}
+
+.game-canvas {
+  /*width: 500px;
+	height: 500px;*/
+  margin: 8px auto;
+  border-radius: 5px;
+}
+
+.dialog-container {
+  display: none;
+  position: absolute;
+  top: 220px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.dialog {
+  width: 400px;
+  height: 270px;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding-top: 130px;
+  background-color: rgba(250, 210, 150, 0.5);
+  text-align: center;
+  color: white;
+  word-wrap: normal;
+}
+
+.dialog .msg {
+  font-size: 25px;
+}
+
+.dialog .replay-btn, .next-level-btn {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px auto;
+  font-size: 20px;
+  background: lightblue;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.how-to-play {
+  border-bottom: 1px solid #d8d4d0;
+}
+
+.about {
+  text-align: center;
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 280px;
+    margin: 30px auto;
+  }
+
+  h1.title {
+    font-size: 30px;
+  }
+
+  /*.level-container{
+    padding: 7px;
+  }*/
+  .dialog-container {
+    top: 150px;
+  }
+
+  .dialog {
+    width: 220px;
+    height: 205px;
+    border-radius: 2px;
+    padding-top: 15px;
+  }
+
+  canvas {
+    width: 280px;
+    height: 280px;
+    background: black;
+  }
+
+  .dialog .replay-btn, .next-level-btn {
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px auto;
+    /*font-size: 10px;*/
+    /*background: lightblue;
+    border-radius: 3px;
+    cursor: pointer;*/
+  }
+}

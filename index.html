@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset = UTF-8">
+  <title>Rebound</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui"> -->
+  <meta name="description" content="Rebound is a simple physics game." />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117992050-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117992050-3');
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="dialog-container">
+      <div class="dialog">
+        <p class="msg"></p>
+        <div class="next-level-btn" style="display: none;">Next level</div>
+        <div class="replay-btn">Replay</div>
+      </div>
+    </div>
+    <div class="heading">
+      <h1 class="title">Rebound</h1>
+      <div class="level-container">
+        <div class="level-title">LEVEL</div>
+        <div class="level-value">1</div>
+      </div>
+      <p>Rotate the baffle to bounce the ball out.</p>
+    </div>
+    <div class="game-container">
+      <canvas
+        class="game-canvas"
+        width=500
+        height=500
+        style="background-color: rgb(238, 228, 218);"
+      ></canvas>
+    </div>
+    <div class="introduction">
+      <div class="how-to-play">
+        <h3>HOW TO PLAY:</h3>
+        <p>
+          <strong>[for Desktop]</strong> Press <strong>A or D key</strong>.
+        </p>
+        <p>
+          <strong>[for Mobile]</strong> Tap the <strong>square area</strong>.
+        </p>
+      </div>
+      <div class="about">
+        <p>Created by <a href="https://github.com/enzeberg">Li Enze</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/ui_manager.js"></script>
+  <script src="./js/input_manager.js"></script>
+  <script src="./js/level_manager.js"></script>
+  <script src="./js/ball.js"></script>
+  <script src="./js/baffle.js"></script>
+  <script src="./js/game.js"></script>
+  <script src="./js/vector.js"></script>
+  <script src="./js/wall.js"></script>
+  <script src="./js/hole.js"></script>
+  <script src="./js/enemy.js"></script>
+  <script>
+    (function () {
+      var cv = document.querySelector('canvas');
+      var cx = cv.getContext('2d');
+      cx.translate(cv.width / 2, cv.height / 2);
+      var ballRadius = Math.floor(0.02 * cv.width);
+      var game = new Game(ballRadius, cx);
+    })();
+  </script>
+</body>
+</html>
